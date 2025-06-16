@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BalloonCanvas from "./components/CanvasEditor.tsx";
+import React, { useState } from "react";
 
 function App() {
+  const [balloons, setBalloons] = useState([
+    { x: 50, y: 50, scale: 0.01, color: "red" },
+  ]);
+
+  const addBalloon = (color) => {
+    console.log("Adding balloon with color:", color);
+    const newBalloon = {
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      scale: 0.01,
+      color: color ?? "blue", // Default color if none provided
+    };
+    setBalloons([...balloons, newBalloon]);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BalloonCanvas balloons={balloons} addBalloon={addBalloon} />
     </div>
   );
 }
