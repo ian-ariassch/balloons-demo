@@ -1,6 +1,5 @@
-import { Transform } from "konva/lib/Util";
-import React, { use, useEffect } from "react";
-import { Stage, Layer, Path, Transformer, Group } from "react-konva";
+import React, { useEffect } from "react";
+import { Path, Transformer, Group } from "react-konva";
 
 const balloonPathData = `M4430 12789 c-921 -59 -1769 -370 -2480 -908 -1067 -807 -1758 -2084
 -1914 -3536 -69 -641 -34 -1378 100 -2105 192 -1039 624 -2084 1222 -2955 536
