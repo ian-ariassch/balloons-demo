@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Balloon from "./Balloon.tsx";
 
 export default function BalloonCanvas({ balloons, addBalloon }) {
-  const [pickedColor, setPickedColor] = useState("red");
+  const [pickedColor, setPickedColor] = useState("#ff0000");
 
   return (
     <>

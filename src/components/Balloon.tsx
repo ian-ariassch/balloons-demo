@@ -54,6 +54,7 @@ export default function Balloon({
     };
   }, []);
 
+  console.log("Balloon rendered with color:", color, "at position:", x, y);
   return (
     <>
       <Group
@@ -69,6 +70,7 @@ export default function Balloon({
           fill={color}
           stroke="black"
           strokeWidth={2}
+          rotation={180}
         />
       </Group>
       {isSelected && <Transformer ref={trRef} />}
